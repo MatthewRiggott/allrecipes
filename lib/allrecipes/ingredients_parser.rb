@@ -26,7 +26,7 @@ class IngredientsParser
       _details = amount.text.split(" ")
       quantity = eval "#{_details[0]}.0"
       unit = _details.last
-      @ingredients << { quantity: quantity.to_f, unit: unit, name: ingredient_name.text }
+      @ingredients << { description: amount, quantity: quantity.to_f, unit: unit, name: ingredient_name.text }
     end
   end
 
